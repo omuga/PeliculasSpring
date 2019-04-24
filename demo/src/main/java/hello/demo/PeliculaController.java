@@ -1,6 +1,5 @@
 package hello.demo;
 
-import java.security.cert.PKIXRevocationChecker.Option;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import hello.demo.PeliculaRepository;
 public class PeliculaController {
     @Autowired
     private PeliculaRepository pelicularepository;
-    @GetMapping(path = "/add/{title}")
+    @GetMapping(path = "/add/{title}") // Solo de Prueba, NO USAR VERBOS EN URL
     public Pelicula addNewPelicula( @PathVariable("title")String title){
         Pelicula p = new Pelicula();
         p.setTitle(title);
